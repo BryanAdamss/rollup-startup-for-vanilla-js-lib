@@ -42,6 +42,7 @@ export default {
     minify()
   ],
   external: [
+    // 配置额外库
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {})
   ]
