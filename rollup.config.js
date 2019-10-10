@@ -12,18 +12,18 @@ import minify from 'rollup-plugin-babel-minify'
 // umd – 通用模块定义，以amd，cjs 和 iife 为一体
 // 所以正常情况下打包es及umd格式即可
 
-const LIB_NAME = 'DrawingBoard'
+const LIB_NAME = 'drawing-board'
 const pkg = require('./package.json')
 
 export default {
   input: 'src/main.js',
   output: [
     {
-      file: `dist/${LIB_NAME}.es.js`,
+      file: `dist/${LIB_NAME}.esm.js`,
       format: 'es'
     },
     {
-      file: `dist/${LIB_NAME}.js`,
+      file: `dist/${LIB_NAME}.min.js`,
       format: 'umd',
       // umd模式需要指定name
       name: LIB_NAME
